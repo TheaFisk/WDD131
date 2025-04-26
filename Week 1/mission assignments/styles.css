@@ -1,0 +1,62 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+
+body {
+    font-family: "Crimson Text";
+    font-weight: lighter;
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 28%;
+    margin-top: 2.5%;
+    margin-bottom: 2%;
+    border: 1px solid #ccc;
+}
+
+main {
+    padding-top: 4%;
+}
+
+.container{
+    text-align: left;
+    padding: 40px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.title h1 h2 {
+    font-weight: 200;
+    letter-spacing: 10px;
+}
+
+.title h2 {
+    color:#006EB6;
+    font-size: 20px;
+    border-bottom: 1px solid #c5c5c5;
+    letter-spacing: 2px;
+    font-weight: 200;
+}
+
+.title {
+    font-family: "Crimson Text";
+    text-transform: capitalize;
+    text-align: center;
+    line-height: 1;
+    letter-spacing: 5px;
+    font-weight: 200;
+}
+
+#logo {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+}
+.list {
+    line-height: 2;
+    padding-bottom: 3%;
+}
+
+.italic {
+    font-style: italic;
+}
+
