@@ -1,13 +1,9 @@
 
-
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
-
 body {
-    font-family: "Crimson Text";
     font-weight: lighter;
     font-size: 20px;
     line-height: 1.5;
-    margin: 10%;
+    margin: 15%;
     margin-top: 2.5%;
     margin-bottom: 2%;
     border: 1px solid #ccc;
@@ -38,7 +34,6 @@ main {
 }
 
 .title {
-    font-family: "Crimson Text";
     text-transform: capitalize;
     text-align: center;
     line-height: 1;
