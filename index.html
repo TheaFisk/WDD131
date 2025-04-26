@@ -1,17 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <link rel="stylesheet" href="styles/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WDD 131 | Navigation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+            background-color: rgb(185, 111, 255);
+        }
+        .content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .outlined-img {
+            border: 2px solid rgb(0, 2, 107);
+            padding: 5px;
+        }
+        .text {
+            max-width: 400px;
+        }
+        .links a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px;
+            border: 2px solid black;
+            text-decoration: none;
+            color: black;
+        }
+        .links a:hover {
+            background-color: rgb(0, 129, 204);
+            color: rgb(0, 0, 0);
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav href="Week 1/mission assignments/index.html"></nav>
-    </header>
+    <div class="links">
+        <a href="Week 1/mission assignments/index.html">Mission Assignment</a>
+    </div>
     
-    <p>
-        This page is for navigation
-    </p>
+    <div class="content">
+        <img class="outlined-img" src="photo-output_6 3.JPEG" alt="Thea with Guitar" width="300">
+        <div class="text">
+            <p>Hello! I am very excited to take WDD 131 with everyone!</p>
+            <p>My hobbies include playing the guitar and also the board game Risk.</p>
+            <p>If you ever play against me in Risk, you will lose. Even if you have Australia.</p>
+        </div>
+    </div>
+    
 </body>
 </html>
