@@ -1,0 +1,80 @@
+body {
+    /*Font styling*/
+    font-weight: lighter;
+    font-size: 20px;
+    line-height: 1.5;
+    /*Define border for body*/
+    margin: 15%;
+    margin-top: 2.5%;
+    margin-bottom: 2%;
+    /*Border line*/
+    border: 1px solid #ccc;
+}
+.content{
+    /*Declare width and align text*/
+    max-width: 600px;
+    text-align: left;
+    /*Formatting*/
+    padding: 40px;
+    margin: auto;
+}
+main {
+    /*Additional formatting*/
+    padding-top: 4%;
+}
+.title {
+    /*Text styling*/
+    text-transform: capitalize;
+    text-align: center;
+    line-height: 1;
+    letter-spacing: 5px;
+    font-weight: 200;
+}
+.title h2 {
+    /*Heading 2 specifications*/
+    color:#006EB6;
+    font-size: 18px;
+    border-bottom: 1px solid #c5c5c5;
+    letter-spacing: 3px;
+}
+#logo {
+    /*Logo formatting*/
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+}
+.list {
+    /*Formatting to match image*/
+    padding-bottom: 3%;
+}
+.italic {
+    /*Style line to be italicized*/
+    font-style: italic;
+}
+
+/*Dark theme mode*/
+
+.dark {
+    background-color: #333;
+    color:white;
+}
+.dark h2 {
+    color: #A0D4ED; /* from the official BYUI branding page*/
+}
+
+/*Party Mode*/
+
+.party {
+    animation: colorCycle 5s linear infinite;
+    background-color: rgb(128, 52, 115);
+    cursor: grab;
+  }
+  
+  @keyframes colorCycle {
+    0%   { color: red; }
+    20%  { color: orange; }
+    40%  { color: yellow; }
+    60%  { color: green; }
+    80%  { color: blue; }
+    100% { color: violet; }
+  }
