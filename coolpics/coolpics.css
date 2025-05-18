@@ -40,13 +40,14 @@ nav {
   text-align: center;
 }
 
-button.menu {
+button {
   background: none;
   border: none;
   color: white;
   font: inherit;
   /*text-decoration: underline; */
   position: relative;
+  padding: 2%;
   top: 5px;
   right: 1%;
   cursor: pointer;
@@ -59,8 +60,9 @@ nav a {
   /*text-decoration: underline; */
   font-weight: bold;
 }
-.hide {
-	display: none;
+
+nav.hide {
+	display: none !important;
 }
 
 main {
@@ -113,7 +115,7 @@ footer {
         grid-template-columns: repeat(3, 1fr);
     }
     button.menu {
-        display: none;
+        display: flex;
     }
     header, footer {
         padding: 20px;

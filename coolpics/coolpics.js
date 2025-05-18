@@ -1,10 +1,10 @@
 
 
-const menuButton = document.querySelector(".menu-button");
+document.addEventListener("DOMContentLoaded", () => {
+  const menuButton = document.getElementById("menu");
+  const nav = document.getElementById("mainNav");
 
-function toggleMenu() {
-  const menu = document.querySelector(".menu");
-  menu.classList.toggle("hide");
-}
-
-menuButton.addEventListener("click", toggleMenu);
+  menuButton.addEventListener("click", () => {
+    nav.classList.toggle("hide");
+  });
+});
