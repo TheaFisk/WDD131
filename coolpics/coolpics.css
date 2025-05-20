@@ -101,6 +101,40 @@ footer {
   font-size: 12px;
 }
 
+dialog.image-modal {
+  border: none;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 0;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+dialog.image-modal::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+dialog.image-modal img {
+  max-height: 90vh;
+  max-width: 90vw;
+  object-fit: contain;
+  margin: 0;
+}
+
+button.close-viewer {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  color: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
 @media screen and (min-width: 700px) {
     .gallery {
         grid-template-columns: 1fr 1fr;
