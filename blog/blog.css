@@ -1,0 +1,79 @@
+
+:root {
+  --primary-color: #26547c;
+  --secondary-color: #ef476f;
+  --color-three: #FFD166;
+  --color-four: #06d6a0;
+  --color-four: #FCFCFC;
+  --font-main: 'Arial', sans-serif;
+  --body-font: "Helvetica", "Arial", sans-serif;
+  --headline-font: "Lora", "Impact", serif;
+  --spacing: 1rem;
+}
+
+.main-nav {
+    display: grid;
+    grid-template-columns: 3fr;
+    justify-content: end;
+    color: #ef476f;
+}
+
+#book-title {
+    color: #ef476f;
+}
+
+main {
+    background-color: var(--color-four);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.title {
+    text-align: center;
+}
+header h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 1rem 0;
+    font-family: var(--headline-font);
+}
+
+.main-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+    border-top: 2px solid var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.main-nav a {
+    text-decoration: none;
+    font-size: 1.25rem;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+header {
+    background-color: var(--color-five);
+}
+
+#date {
+    grid-column: 1;
+}
+
+#book-spot {
+    grid-column: 2;
+}
+
+#filter {
+    grid-column: 3;
+}
+
