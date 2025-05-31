@@ -4,43 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="This is a blog">
-    <meta name="author" content="Me">
+    <title>Book Review Blog</title>
     <link rel="stylesheet" href="blog.css">
-    <script src="blog.js"></script>
-    <title>The Blog</title>
-    
+    <script src="blog.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1 id="title">Kids Read For Fun</h1>
-        <nav>
-            <ul class="main-nav">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Archive</a></li>
-                <li><a href="#">Search</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <div id="date">
-            <p>July 5 2022</p>
-            <p>10-14</p>
-            <p>Fantasy</p>
-            <p>****</p>
-        </div>
-
-        <div class="book-spot">
-            <h2 id="book-title">Septimus Heap Book One: Magyk</h2>
-            <img src="images/cover.jpg" alt="Book image">
-        </div>
-
-        <div id="filter">
-            <p>Filter form will go here</p>
-        </div>
-    </main>
-
-
+  <header>
+    <div class="skiptocontent">
+      <a href="#maincontent">skip to main content</a>
+    </div>
+    <h1>Kids Read For Fun</h1>
+    <nav>
+      <ul class="main-nav">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Archive</a></li>
+        <li><a href="#">Search</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="maincontent">
+    <section class="content-layout">
+      <section class="articles" id="articles">
+      </section>
+      <aside class="filters">
+        <p>Filter form will go here</p>
+      </aside>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Thea Fisk</p>
+  </footer>
 </body>
 </html>
