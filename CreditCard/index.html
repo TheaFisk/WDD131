@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <main>
+        <form>
+            <label type="CreditCard">Credit Card</label>
+            <div class="card-container">
+                <div class="card card-front">
+                    <label>Total: $199</label>
+
+                    <label for="cardNumber">Card Number</label>
+                    <input type="text" id="creditCardNumber" name="creditCardNumber"
+                    pattern="[0-9]{16}" placeholder="1234 5678 9101 1020" required/>
+
+                    <label for="cardHolder">Card Holder</label>
+                    <input type="text" id="cardHolder" name="cardHolder" placeholder="John Doe" required/>
+
+                    <label for="expiration">Expiration</label>
+                    <input type="number" id="expirationMM" name="expirationMM" placeholder="MM" required/>
+                    <input type="number" id="expirationYY" name="expirationYY" placeholder="YY" required/>
+                </div>
+
+                <div class="card card-back">
+                    <label for="cvv">CVC/CVV</label>
+                    <input type="number" id="cvv" name="cvv" placeholder="xxx" pattern="[0-9]{3}" required/>
+
+                </div>
+            </div>
+
+            <button type="submit">Submit</button>
+
+        </form>
+    </main>
+</body>
+</html>

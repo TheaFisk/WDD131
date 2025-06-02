@@ -1,0 +1,99 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+main {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card-container {
+  position: relative;
+  width: 100%;
+  height: 220px;
+}
+
+.card {
+  position: absolute;
+  width: 350px;
+  height: 100%;
+  padding: 20px;
+  border-radius: 7px;
+  box-shadow: 0 4px 12px grey;
+  color: black;
+  background-color: #e6e6e6;
+}
+
+.card-front {
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+
+.card-back {
+  z-index: 1;
+  background-color: #d0d0d0;
+  top: 20%;
+  left: 15%;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+input {
+  width: 100%;
+  padding: 6px 10px;
+  margin-top: 5px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+input#expirationMM,
+input#expirationYY {
+  width: 20%;
+  display: inline-block;
+  left: 30%;
+}
+
+#cardHolder, #expiration, #expirationMM, #expirationYY {
+    width: 30%;
+    display:inline-block;
+}
+
+.card-front::after {
+  content: "💳";
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 1.8rem;
+}
+
+button {
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border: 2px solid black;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 100px;
+  z-index: 1;
+}
