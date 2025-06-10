@@ -1,41 +1,104 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Credit Card</title>
-    <link rel="stylesheet" href="styles.css"/>
+    <title>Credit Card Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="credit.js" defer></script>
 </head>
 <body>
-    <main>
-        <form>
-            <label type="CreditCard">Credit Card</label>
-            <div class="card-container">
-                <div class="card card-front">
-                    <label>Total: $199</label>
-
-                    <label for="cardNumber">Card Number</label>
-                    <input type="text" id="creditCardNumber" name="creditCardNumber"
-                    pattern="[0-9]{16}" placeholder="1234 5678 9101 1020" required/>
-
-                    <label for="cardHolder">Card Holder</label>
-                    <input type="text" id="cardHolder" name="cardHolder" placeholder="John Doe" required/>
-
-                    <label for="expiration">Expiration</label>
-                    <input type="number" id="expirationMM" name="expirationMM" placeholder="MM" required/>
-                    <input type="number" id="expirationYY" name="expirationYY" placeholder="YY" required/>
-                </div>
-
-                <div class="card card-back">
-                    <label for="cvv">CVC/CVV</label>
-                    <input type="number" id="cvv" name="cvv" placeholder="xxx" pattern="[0-9]{3}" required/>
-
+    <div class="payment-container">
+        <!-- Card Display Section -->
+        <div class="card-display">
+            <!-- Card Front -->
+            <div class="card-front">
+                <div class="card-chip"></div>
+                <div class="visa-logo">VISA</div>
+                <div class="card-number">1234 ****  ****  ****</div>
+                <div class="card-details">
+                    <div class="card-holder">
+                        <div class="card-holder-label">Card Holder</div>
+                        <div class="card-holder-name">FULL NAME</div>
+                    </div>
+                    <div class="expiry">
+                        <div class="expiry-label">Expires</div>
+                        <div class="expiry-date">MM/YY</div>
+                    </div>
                 </div>
             </div>
 
-            <button type="submit">Submit</button>
+            <!-- Card Back -->
+            <div class="card-back">
+                <div class="magnetic-strip"></div>
+                <div class="cvv-section">
+                    <div class="cvv-label">CVV</div>
+                    <div class="cvv-display">123</div>
+                </div>
+                <div class="card-info">
+                    <p>This card is property of the bank</p>
+                    <p>Call customer service for assistance</p>
+                </div>
+            </div>
+        </div>
 
+        <!-- Form Section -->
+        <form id="creditCardForm">
+            <div class="form-group">
+                <label for="cardNumber">Card Number</label>
+                <input type="text" id="cardNumber" name="cardNumber" pattern="[0-9]{16}" placeholder="1234 5678 9101 1020" required/>
+            </div>
+
+            <div class="form-group">
+                <label for="cardHolder">Card Holder Name</label>
+                <input type="text" id="cardHolder" name="cardHolder" placeholder="John Doe" required/>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="expiryMonth">Expiration Date</label>
+                    <select id="expiryMonth" name="expiryMonth" required>
+                        <option value="">Month</option>
+                        <option value="01">01 - January</option>
+                        <option value="02">02 - February</option>
+                        <option value="03">03 - March</option>
+                        <option value="04">04 - April</option>
+                        <option value="05">05 - May</option>
+                        <option value="06">06 - June</option>
+                        <option value="07">07 - July</option>
+                        <option value="08">08 - August</option>
+                        <option value="09">09 - September</option>
+                        <option value="10">10 - October</option>
+                        <option value="11">11 - November</option>
+                        <option value="12">12 - December</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="expiryYear" style="opacity: 0;">Year</label>
+                    <select id="expiryYear" name="expiryYear" required>
+                        <option value="">Year</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
+                        <option value="2031">2031</option>
+                        <option value="2032">2032</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="cvv">CVV</label>
+                    <input type="number" id="cvv" name="cvv" placeholder="xxx" pattern="[0-9]{3}" required/>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit</button>
         </form>
-    </main>
+    </div>
+
 </body>
 </html>
