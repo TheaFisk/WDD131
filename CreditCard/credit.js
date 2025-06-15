@@ -56,9 +56,6 @@ function flipCard() {
     // Flip the card when CVV is focused
     var cardFront = document.querySelector('.card-front');
     var cardBack = document.querySelector('.card-back');
-    
-    cardFront.style.transform = 'rotateY(180deg)';
-    cardBack.style.transform = 'rotateY(0deg)';
 }
 
 function flipCardBack() {
