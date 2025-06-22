@@ -1,0 +1,206 @@
+/* Import the Google font */
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
+
+/* Global Variables */
+:root {
+    --primary-color: #1B98E0; /* Primary color for buttons or links */
+    --secondary-color: #59c3c3; /* Secondary color for accents */
+    --text-dark: #333; /* Dark text for readability */
+    --text-light: #ebebeb; /* Light text for background elements */
+    --primary-font: Arial, Helvetica, sans-serif; /* Default font */
+    --secondary-font: "Amatic SC", cursive; /* Alternative font for headings */
+}
+header {
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Center the content horizontally */
+    gap: 10px; /* Space between the logo and the heading */
+    padding: 20px;
+}
+
+/* Logo Styling */
+header .logo {
+    width: 100px; /* Resize the logo */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Heading Styling */
+header h1 {
+    font-size: 2rem; /* Adjust heading size as needed */
+    margin: 0;
+}
+#search-form {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#search-form input {
+    padding: 5px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    width: 200px; /* Adjust as needed */
+}
+
+#search-form button {
+    padding: 5px 10px;
+    background-color: #1B98E0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#search-form button:hover {
+    background-color: #1598d5;
+}
+/* General body styles */
+body {
+    font-family: var(--primary-font);
+    background-color: #f4f4f4;
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+}
+/* Footer Styling */
+footer {
+    text-align: center; /* Center text and content in the footer */
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+footer p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Social Media Icons */
+.social {
+    display: flex;
+    justify-content: center; /* Centers the icons horizontally */
+    gap: 15px; /* Adds space between the icons */
+    margin-top: 10px;
+}
+
+.social a img {
+    width: 24px; /* Resize the icons */
+    height: 24px; /* Maintain aspect ratio */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.social a img:hover {
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
+
+/* Global Heading Styles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--secondary-font), sans-serif;
+}
+
+/* Responsive image styles */
+img {
+    max-width: 100%; /* Makes images responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+.container {
+    padding: 0 15px; /* Add horizontal padding to the body to create space */
+}
+/* Recipe Section Styles */
+.recipe-list {
+    border: 5px solid #070404; /* Add a border around each recipe */
+    padding: 20px; /* Add padding inside the box */
+    margin-bottom: 20px; /* Space between the recipe boxes */
+    border-radius: 8px; /* Rounded corners for the box */
+    background-color: #f9f9f9; /* Light background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+    width: 100%; /* Make the box take up the full available width */
+    box-sizing: border-box; /* Ensure padding is included in the width calculation */
+}
+
+/* Recipe Title Styles */
+.recipe-list h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Recipe Image */
+.recipe-list img {
+    max-width: 100%; /* Ensure images do not exceed the width of their container */
+    height: auto; /* Maintain aspect ratio */
+    width: 450px; /* Resize the image to a smaller size, you can adjust this */
+    margin: 0 auto; /* Center the image horizontally */
+    display: block; /* Make the image a block element to enable centering */
+    margin-bottom: 10px; /* Add some space below the image */
+}
+
+/* Recipe Description */
+.recipe-list p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+/* Rating Section Styles */
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.icon-star, .icon-star-empty {
+    font-size: 1.2rem;
+    color: #FFD700; /* Gold color for stars */
+}
+
+/* Layout adjustments for mobile */
+@media (max-width: 600px) {
+    /* Stack layout */
+    .recipe-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Make description hidden on mobile */
+    .recipe-list p {
+        display: none; /* Hide the description for mobile */
+    }
+
+    /* Adjust the title size */
+    .recipe-list h2 {
+        font-size: 1.25rem;
+    }
+
+    /* Adjust image size */
+    .recipe-list img {
+        max-width: 100%;
+    }
+
+    /* Show description on larger screens */
+    @media (min-width: 601px) {
+        .recipe-list p {
+            display: block; /* Show the description */
+        }
+    }
+}
+
+/* Add button or link styles if you use them */
+button, a {
+    font-family: var(--primary-font);
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, a:hover {
+    background-color: var(--secondary-color);
+}
