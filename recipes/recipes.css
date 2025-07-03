@@ -10,24 +10,12 @@
     --primary-font: Arial, Helvetica, sans-serif; /* Default font */
     --secondary-font: "Amatic SC", cursive; /* Alternative font for headings */
 }
-
-/* General body styles */
-body {
-    font-family: var(--primary-font);
-    background-color: #f4f4f4;
-    color: var(--text-dark);
-    margin: 0;
-    padding: 0;
-}
-
-/* Header Styling */
 header {
     display: flex;
     align-items: center; /* Vertically center the content */
     justify-content: center; /* Center the content horizontally */
-    gap: 20px; /* Space between elements */
+    gap: 10px; /* Space between the logo and the heading */
     padding: 20px;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 /* Logo Styling */
@@ -40,10 +28,7 @@ header .logo {
 header h1 {
     font-size: 2rem; /* Adjust heading size as needed */
     margin: 0;
-    font-family: var(--secondary-font);
 }
-
-/* Search Form Styling */
 #search-form {
     display: flex;
     align-items: center;
@@ -59,122 +44,33 @@ header h1 {
     border: none;
     border-radius: 5px;
     width: 200px; /* Adjust as needed */
-    outline: none;
 }
 
 #search-form button {
     padding: 5px 10px;
-    background-color: var(--primary-color);
+    background-color: #1B98E0;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-left: 5px;
 }
 
 #search-form button:hover {
-    background-color: var(--secondary-color);
+    background-color: #1598d5;
 }
-
-/* Container for main content */
-.container {
-    padding: 0 15px; /* Add horizontal padding to create space */
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Recipe List Container */
-.recipe-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px 0;
-}
-
-/* Individual Recipe Item Styles */
-.recipe-item {
-    border: 2px solid #ddd;
-    padding: 20px;
-    border-radius: 8px;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.recipe-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Recipe Title Styles */
-.recipe-item h2 {
-    font-family: var(--secondary-font);
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    color: var(--primary-color);
-    text-align: center;
-}
-
-/* Recipe Image */
-.recipe-item img {
-    max-width: 100%;
-    height: auto;
-    width: 100%;
-    max-width: 450px;
-    margin: 0 auto 15px auto;
-    display: block;
-    border-radius: 8px;
-    object-fit: cover;
-}
-
-/* Recipe Description */
-.recipe-description {
-    font-size: 1rem;
-    margin-bottom: 15px;
+/* General body styles */
+body {
+    font-family: var(--primary-font);
+    background-color: #f4f4f4;
     color: var(--text-dark);
-    line-height: 1.5;
+    margin: 0;
+    padding: 0;
 }
-
-/* Recipe Meta Information */
-.recipe-meta {
-    background-color: #f8f9fa;
-    padding: 15px;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    border-left: 4px solid var(--primary-color);
-}
-
-.recipe-meta p {
-    margin: 5px 0;
-    font-size: 0.9rem;
-    color: var(--text-dark);
-}
-
-/* Rating Section Styles */
-.rating {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2px;
-    margin-top: 10px;
-}
-
-.icon-star, .icon-star-empty {
-    font-size: 1.2rem;
-    color: #FFD700; /* Gold color for stars */
-}
-
-.icon-star-empty {
-    color: #ddd; /* Light gray for empty stars */
-}
-
 /* Footer Styling */
 footer {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: var(--text-dark);
-    color: var(--text-light);
-    margin-top: 40px;
+    text-align: center; /* Center text and content in the footer */
+    padding: 20px;
+    background-color: #f4f4f4;
 }
 
 footer p {
@@ -182,33 +78,22 @@ footer p {
     margin-bottom: 10px;
 }
 
-footer a {
-    color: var(--secondary-color);
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
 /* Social Media Icons */
 .social {
     display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
+    justify-content: center; /* Centers the icons horizontally */
+    gap: 15px; /* Adds space between the icons */
+    margin-top: 10px;
 }
 
 .social a img {
-    width: 24px;
-    height: 24px;
-    transition: transform 0.3s ease;
-    filter: brightness(0) invert(1); /* Make icons white */
+    width: 24px; /* Resize the icons */
+    height: 24px; /* Maintain aspect ratio */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
 }
 
 .social a img:hover {
-    transform: scale(1.1);
-    filter: brightness(0) invert(1) sepia(1) hue-rotate(180deg);
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
 }
 
 /* Global Heading Styles */
@@ -218,11 +103,92 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Responsive image styles */
 img {
-    max-width: 100%;
-    height: auto;
+    max-width: 100%; /* Makes images responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+.container {
+    padding: 0 15px; /* Add horizontal padding to the body to create space */
+}
+/* Recipe Section Styles */
+.recipe-list {
+    border: 5px solid #070404; /* Add a border around each recipe */
+    padding: 20px; /* Add padding inside the box */
+    margin-bottom: 20px; /* Space between the recipe boxes */
+    border-radius: 8px; /* Rounded corners for the box */
+    background-color: #f9f9f9; /* Light background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+    width: 100%; /* Make the box take up the full available width */
+    box-sizing: border-box; /* Ensure padding is included in the width calculation */
 }
 
-/* Button and link styles */
+/* Recipe Title Styles */
+.recipe-list h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Recipe Image */
+.recipe-list img {
+    max-width: 100%; /* Ensure images do not exceed the width of their container */
+    height: auto; /* Maintain aspect ratio */
+    width: 450px; /* Resize the image to a smaller size, you can adjust this */
+    margin: 0 auto; /* Center the image horizontally */
+    display: block; /* Make the image a block element to enable centering */
+    margin-bottom: 10px; /* Add some space below the image */
+}
+
+/* Recipe Description */
+.recipe-list p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+/* Rating Section Styles */
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.icon-star, .icon-star-empty {
+    font-size: 1.2rem;
+    color: #FFD700; /* Gold color for stars */
+}
+
+/* Layout adjustments for mobile */
+@media (max-width: 600px) {
+    /* Stack layout */
+    .recipe-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Make description hidden on mobile */
+    .recipe-list p {
+        display: none; /* Hide the description for mobile */
+    }
+
+    /* Adjust the title size */
+    .recipe-list h2 {
+        font-size: 1.25rem;
+    }
+
+    /* Adjust image size */
+    .recipe-list img {
+        max-width: 100%;
+    }
+
+    /* Show description on larger screens */
+    @media (min-width: 601px) {
+        .recipe-list p {
+            display: block; /* Show the description */
+        }
+    }
+}
+
+/* Add button or link styles if you use them */
 button, a {
     font-family: var(--primary-font);
     background-color: var(--primary-color);
@@ -237,72 +203,4 @@ button, a {
 
 button:hover, a:hover {
     background-color: var(--secondary-color);
-}
-
-/* Mobile Styles (default - mobile first approach) */
-@media (max-width: 600px) {
-    header {
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    header h1 {
-        font-size: 1.5rem;
-    }
-    
-    #search-form input {
-        width: 150px;
-    }
-    
-    /* Hide description and meta info on mobile */
-    .recipe-description,
-    .recipe-meta {
-        display: none;
-    }
-    
-    .recipe-item h2 {
-        font-size: 1.4rem;
-    }
-}
-
-/* Tablet and Desktop Styles */
-@media (min-width: 601px) {
-    /* Show description and meta info on larger screens */
-    .recipe-description,
-    .recipe-meta {
-        display: block;
-    }
-    
-    /* Grid layout for larger screens */
-    .recipe-list {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-        gap: 30px;
-        padding: 30px 0;
-    }
-    
-    .recipe-item img {
-        height: 250px;
-        object-fit: cover;
-    }
-}
-
-/* Large Desktop Styles */
-@media (min-width: 960px) {
-    .container {
-        max-width: 1200px;
-    }
-    
-    .recipe-list {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 40px;
-    }
-    
-    header {
-        padding: 30px 20px;
-    }
-    
-    header h1 {
-        font-size: 2.5rem;
-    }
 }

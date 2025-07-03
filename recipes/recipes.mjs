@@ -7,7 +7,7 @@ const recipes = [
 		datePublished: '2016-10-16',
 		tags: ['Waffles', 'Sweet Potato', 'Side'],
 		description: 'Savory waffles made with Sweet potato with a hint of Ginger',
-		image: './images/sweet-potato-waffle-md.jpg',
+        image: './images/sweet-potato-waffle-md.jpg',
 		recipeIngredient: [
 			'2 separated eggs',
 			'1/4 C Oil',
@@ -281,3 +281,98 @@ const recipes = [
 ]
 
 export default recipes
+
+
+function displayRecipes() {
+    const recipeList = document.getElementById('recipe-list');
+    
+    
+    recipes.forEach(recipe => {
+        const recipeSection = document.createElement('section');
+        recipeSection.classList.add('recipe');
+
+       
+        const recipeTitle = document.createElement('h2');
+        recipeTitle.textContent = recipe.name;
+
+        
+        const recipeImage = document.createElement('img');
+        recipeImage.src = recipe.image;
+        recipeImage.alt = recipe.name;
+
+        
+        const recipeDescription = document.createElement('p');
+        recipeDescription.textContent = recipe.description;
+
+        
+        const prepTime = document.createElement('p');
+        prepTime.textContent = `Prep Time: ${recipe.prepTime}`;
+
+       
+        const ingredientsList = document.createElement('ul');
+        recipe.recipeIngredient.forEach(ingredient => {
+            const ingredientItem = document.createElement('li');
+            ingredientItem.textContent = ingredient;
+            ingredientsList.appendChild(ingredientItem);
+        });
+
+        
+        const instructionsList = document.createElement('ol');
+        recipe.recipeInstructions.forEach(instruction => {
+            const instructionItem = document.createElement('li');
+            instructionItem.textContent = instruction;
+            instructionsList.appendChild(instructionItem);
+        });
+
+       
+        const ratingDiv = document.createElement('div');
+        ratingDiv.classList.add('rating');
+        ratingDiv.setAttribute('role', 'img');
+        ratingDiv.setAttribute('aria-label', `Rating: ${recipe.rating} out of 5 stars`);
+
+       
+        for (let i = 1; i <= 5; i++) {
+            const star = document.createElement('span');
+            if (i <= recipe.rating) {
+                star.classList.add('icon-star');
+                star.textContent = '⭐';
+            } else {
+                star.classList.add('icon-star-empty');
+                star.textContent = '☆';
+            }
+            star.setAttribute('aria-hidden', 'true');
+            ratingDiv.appendChild(star);
+        }
+
+       
+        recipeSection.appendChild(recipeTitle);
+        recipeSection.appendChild(recipeImage);
+        recipeSection.appendChild(recipeDescription);
+        recipeSection.appendChild(prepTime);
+        recipeSection.appendChild(ingredientsList);
+        recipeSection.appendChild(instructionsList);
+        recipeSection.appendChild(ratingDiv); 
+
+       
+        recipeList.appendChild(recipeSection);
+    });
+}
+document.getElementById('search-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const searchTerm = document.getElementById('search-input').value.toLowerCase();
+    const recipes = document.querySelectorAll('.recipe-list');
+    
+    recipes.forEach(recipe => {
+        const title = recipe.querySelector('h2').textContent.toLowerCase();
+        const description = recipe.querySelector('p').textContent.toLowerCase();
+        
+        if (title.includes(searchTerm) || description.includes(searchTerm)) {
+            recipe.style.display = 'block';
+        } else {
+            recipe.style.display = 'none';
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', displayRecipes);
