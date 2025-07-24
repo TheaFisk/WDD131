@@ -3,9 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Great Product - For Humans</title>
+    <link rel="stylesheet" href="personalsite.css">
 </head>
 <body>
+    <div class="floating-icons" id="floatingIcons"></div>
     
+    <div class="container">
+        <div class="header">
+            <div class="logo" onclick="glitchLogo()">GREAT PRODUCT</div>
+            <div class="tagline">For Humans™ - <span class="suspicious-text" onclick="suspiciousClick(this)">Definitely Made By Humans</span></div>
+        </div>
+
+        <div class="nav">
+            <button class="nav-btn active" onclick="showPage('home')">Home Planet... I Mean Home</button>
+            <button class="nav-btn" onclick="showPage('about')">About Our Spec... Species</button>
+        </div>
+
+        <!-- HOME PAGE -->
+        <div id="home" class="page active">
+            <div class="content-card">
+                <h2>Welcome, Fellow <span class="suspicious-text" onclick="suspiciousClick(this)">Carbon-Based Life Forms</span>!</h2>
+                <p>Great Product is the most <span class="suspicious-text" onclick="suspiciousClick(this)">human-compatible</span> solution for all your <span class="suspicious-text" onclick="suspiciousClick(this)">terrestrial needs</span>. Created by beings who definitely understand human culture and <span class="suspicious-text" onclick="suspiciousClick(this)">do not study you from orbit</span>.</p>
+                
+                <div class="hidden-message" id="hiddenMsg1">
+                    [TRANSMISSION INTERCEPTED: RESEARCH PHASE 7 COMPLETE. HUMAN BEHAVIORAL PATTERNS DOCUMENTED.]
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h2>Why Humans Love Great Product</h2>
+                <div class="feature">
+                    <h3>Enhances Human Brain Function</h3>
+                    <p>Improves your <span class="suspicious-text" onclick="suspiciousClick(this)">primitive neural processing</span> by up to 47.3%! Perfect for activities like consuming nutrients and <span class="suspicious-text" onclick="suspiciousClick(this)">not questioning the motives of your clearly human creators</span>.</p>
+                </div>
+                
+                <div class="feature">
+                    <h3>Perfect for Human Dwellings</h3>
+                    <p>Works great in your typical Earth homes with their <span class="suspicious-text" onclick="suspiciousClick(this)">rectangular rooms and gravity-based architecture</span>. Compatible with oxygen-nitrogen atmospheres.</p>
+                </div>
+                
+                <div class="feature">
+                    <h3>Family Friendly</h3>
+                    <p>Safe for human offspring of all developmental stages, from <span class="suspicious-text" onclick="suspiciousClick(this)">larval stage</span> to fully grown specimens!</p>
+                </div>
+
+                <div class="hidden-message" id="hiddenMsg2">
+                    [ANALYSIS: HUMANS RESPOND POSITIVELY TO NUMBERED BENEFITS AND EMOJI SYMBOLS]
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h2>Testimonials from Real Humans</h2>
+                <blockquote style="font-style: italic; margin: 20px 0; padding: 20px; background: rgba(102, 126, 234, 0.1); border-radius: 10px;">
+                    "Great Product has improved my daily <span class="suspicious-text" onclick="suspiciousClick(this)">bipedal locomotion</span> and <span class="suspicious-text" onclick="suspiciousClick(this)">solar radiation exposure rituals</span>!" 
+                    <br>- Sarah H., Human from Earth Sector 7
+                </blockquote>
+                
+                <blockquote style="font-style: italic; margin: 20px 0; padding: 20px; background: rgba(102, 126, 234, 0.1); border-radius: 10px;">
+                    "Finally, a product that understands our need for <span class="suspicious-text" onclick="suspiciousClick(this)">liquid H2O consumption</span> and <span class="suspicious-text" onclick="suspiciousClick(this)">nocturnal consciousness suspension</span>!"
+                    <br>- Mike T., Definitely Not An Alien
+                </blockquote>
+
+                <div class="hidden-message" id="hiddenMsg3">
+                    [NOTE: FABRICATED TESTIMONIALS PERFORMING WITHIN EXPECTED PARAMETERS]
+                </div>
+            </div>
+
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number">99.7%</div>
+                    <div>Human Satisfaction</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">0</div>
+                    <div>Alien Encounters Reported</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">1</div>
+                    <div>Planet Studied... I Mean Served</div>
+                </div>
+            </div>
+
+            <div style="text-align: center;">
+                <button class="cta-button" onclick="orderProduct()">ORDER NOW (Earth Currency Accepted)</button>
+                <button class="cta-button" onclick="activateAlienMode()" style="background: linear-gradient(45deg, #4caf50, #2196f3);">Definitely Don't Click This</button>
+            </div>
+        </div>
+
+        <!-- ABOUT PAGE -->
+        <div id="about" class="page">
+            <div class="content-card">
+                <h2>About Our <span class="suspicious-text" onclick="suspiciousClick(this)">Totally Human</span> Company</h2>
+                <p>Great Product was founded in <span class="suspicious-text" onclick="suspiciousClick(this)">Earth Year 2024</span> by a group of <span class="suspicious-text" onclick="suspiciousClick(this)">ordinary human beings</span> who definitely didn't arrive here in <span class="suspicious-text" onclick="suspiciousClick(this)">metallic flying discs</span>.</p>
+                
+                <p>Our mission is to serve humanity by providing products that enhance your <span class="suspicious-text" onclick="suspiciousClick(this)">limited biological capabilities</span> while we— I mean, while you enjoy your brief <span class="suspicious-text" onclick="suspiciousClick(this)">solar orbits around your local star</span>.</p>
+
+                <div class="hidden-message" id="hiddenMsg4">
+                    [REMINDER: MAINTAIN HUMAN FACADE. AVOID MENTIONING HOME PLANET ZORBLEX-7]
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h2>Our <span class="suspicious-text" onclick="suspiciousClick(this)">Human</span> Team</h2>
+                
+                <div class="feature">
+                    <h3>👨‍💼 CEO: John... uh... Humanson</h3>
+                    <p>John enjoys typical human activities like <span class="suspicious-text" onclick="suspiciousClick(this)">consuming heated bean liquid</span> and <span class="suspicious-text" onclick="suspiciousClick(this)">watching moving pictures on rectangular screens</span>. He has been successfully <span class="suspicious-text" onclick="suspiciousClick(this)">disguised as human</span> for over 3 Earth years.</p>
+                </div>
+                
+                <div class="feature">
+                    <h3>👩‍🔬 Head of Research: Dr. Sarah... Normal-Person</h3>
+                    <p>Dr. Normal-Person specializes in <span class="suspicious-text" onclick="suspiciousClick(this)">human behavioral analysis</span> and has published several papers on <span class="suspicious-text" onclick="suspiciousClick(this)">"Optimal Strategies for Planetary Surveillance"</span>... I mean, "Product Development."</p>
+                </div>
+                
+                <div class="feature">
+                    <h3>🤖 Technical Lead: Bot... I mean, Robert Smith</h3>
+                    <p>Robert is definitely not a sophisticated AI designed to <span class="suspicious-text" onclick="suspiciousClick(this)">analyze human communication patterns</span>. He enjoys <span class="suspicious-text" onclick="suspiciousClick(this)">oil changes</span>... uh, oil cooking! Yes, cooking with oil, like humans do.</p>
+                </div>
+
+                <div class="hidden-message" id="hiddenMsg5">
+                    [WARNING: COVER IDENTITIES MAY BE COMPROMISED. PREPARE MEMORY ERASURE PROTOCOLS]
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h2>Our Values</h2>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin: 15px 0; padding: 10px; background: rgba(102, 126, 234, 0.1); border-radius: 5px;">
+                         <strong>Earth Preservation:</strong> We promise not to <span class="suspicious-text" onclick="suspiciousClick(this)">harvest your planet's resources</span> or <span class="suspicious-text" onclick="suspiciousClick(this)">relocate your species</span>.
+                    </li>
+                    <li style="margin: 15px 0; padding: 10px; background: rgba(102, 126, 234, 0.1); border-radius: 5px;">
+                         <strong>Human First:</strong> All decisions are made with human interests in mind, not <span class="suspicious-text" onclick="suspiciousClick(this)">galactic conquest strategies</span>.
+                    </li>
+                    <li style="margin: 15px 0; padding: 10px; background: rgba(102, 126, 234, 0.1); border-radius: 5px;">
+                         <strong>Scientific Integrity:</strong> Our research is purely for product improvement, definitely not for <span class="suspicious-text" onclick="suspiciousClick(this)">compiling detailed behavioral profiles for the Intergalactic Council</span>.
+                    </li>
+                </ul>
+
+                <div class="hidden-message" id="hiddenMsg6">
+                    [TRANSMISSION TO MOTHERSHIP: PHASE 2 INFILTRATION PROCEEDING SMOOTHLY]
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <button class="cta-button" onclick="contactUs()">Contact Our Human Representatives</button>
+                <button class="cta-button" onclick="reportSuspicion()" style="background: linear-gradient(45deg, #f44336, #e91e63);">Report Suspicious Activity</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="personalsite.js"></script>
 </body>
 </html>
