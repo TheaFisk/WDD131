@@ -1,3 +1,5 @@
+
+
 * {
     margin: 0;
     padding: 0;
@@ -224,9 +226,206 @@ body {
     opacity: 1;
 }
 
+/* Image Styles */
+.product-image, .feature-img, .testimonial-img, .team-img, .headquarters-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    object-fit: cover;
+}
+
+.product-image {
+    max-height: 300px;
+}
+
+.feature-img {
+    height: 200px;
+}
+
+.testimonial-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.team-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.headquarters-img {
+    max-height: 250px;
+}
+
+.product-image:hover, .feature-img:hover, .headquarters-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.image-caption {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+/* Hero Section Layout */
+.hero-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.hero-text h2 {
+    margin-bottom: 20px;
+}
+
+/* Features Grid Layout */
+.features-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.feature {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-left: 4px solid #667eea;
+    background: rgba(102, 126, 234, 0.1);
+    border-radius: 0 10px 10px 0;
+}
+
+.feature:nth-child(even) {
+    grid-template-columns: 1fr 2fr;
+    border-left: none;
+    border-right: 4px solid #667eea;
+    border-radius: 10px 0 0 10px;
+}
+
+.feature:nth-child(even) .feature-content {
+    order: 2;
+}
+
+.feature:nth-child(even) .feature-image {
+    order: 1;
+}
+
+/* Testimonial Layout */
+.testimonial {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+    align-items: center;
+    margin: 20px 0;
+    padding: 20px;
+    background: rgba(102, 126, 234, 0.1);
+    border-radius: 10px;
+}
+
+.testimonial blockquote {
+    font-style: italic;
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+.testimonial cite {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #667eea;
+}
+
+/* About Page Layout */
+.about-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+/* Team Member Layout */
+.team-member {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    align-items: start;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-left: 4px solid #667eea;
+    background: rgba(102, 126, 234, 0.1);
+    border-radius: 0 10px 10px 0;
+}
+
+.team-member:nth-child(even) {
+    grid-template-columns: 1fr auto;
+    border-left: none;
+    border-right: 4px solid #667eea;
+    border-radius: 10px 0 0 10px;
+}
+
+.team-member:nth-child(even) .team-info {
+    order: 1;
+}
+
+.team-member:nth-child(even) .team-image {
+    order: 2;
+}
+
+.team-info h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design for Images */
 @media (max-width: 768px) {
-    .logo { font-size: 2rem; }
-    .tagline { font-size: 1.2rem; }
-    .nav { flex-direction: column; align-items: center; }
-    .stats { grid-template-columns: 1fr; }
+    .hero-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .feature {
+        grid-template-columns: 1fr !important;
+        text-align: center;
+    }
+    
+    .feature:nth-child(even) .feature-content,
+    .feature:nth-child(even) .feature-image {
+        order: unset;
+    }
+    
+    .testimonial {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .about-header {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .team-member {
+        grid-template-columns: 1fr !important;
+        text-align: center;
+    }
+    
+    .team-member:nth-child(even) .team-info,
+    .team-member:nth-child(even) .team-image {
+        order: unset;
+    }
+    
+    .team-img {
+        margin: 0 auto;
+    }
 }
